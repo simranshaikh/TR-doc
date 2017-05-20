@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/addrs" 
+xmlns:tns="http://www.example.org/addrs" 
+elementFormDefault="qualified">
+<!-- name element -->
+ 	 	<xsd:element name="user">
+         <xsd:complexType>
+          <xsd:attribute name="userid"/>
+          <xsd:restriction base="xsd:int">
+          	<xsd:simpleType>
+          <xsd:pattern value="{4,4}"/>
+          </xsd:restriction>
+ 	      <xsd:sequence>
+ 		     	<xsd:element name="fname" type="xsd:string"/>
+ 		     	<xsd:element name="lname" type="xsd:string"/>
+ 	      </xsd:sequence>
+         </xsd:complexType>
+        </xsd:element>
+       
+       <!-- address element -->
+ 	 	<xsd:element name="address">
+         <xsd:complexType>
+          <xsd:attribute name="addrsid"/>
+          <xsd:restriction base="xsd:string">
+           <xsd:minLength value="1"/>
+           <xsd:maxLength value="3"/>
+          </xsd:restriction>
+ 	      <xsd:sequence>
+ 		     <xsd:element name="houseno" type="xsd:string"/>
+ 		     <xsd:element name="city" type="xsd:string"/>
+ 		     <xsd:element name="pin" type="xsd:int"/>
+ 	      </xsd:sequence>
+         </xsd:complexType>
+        </xsd:element>
+       <!-- MOBILE -->
+       <xsd:element name="mobile">
+       <xsd:complexType>
+       <xsd:sequence>
+       <xsd:element name="work">
+       <xsd:simpleType>
+       <xsd:restriction base="xsd:string"/>
+       <xsd:pattern value="[0-9]{10,10}"/>
+       </xsd:restriction>
+       </xsd:simpleType>
+       </xsd:sequence>
+       </xsd:complexType>
+       </xsd:element>
+       <!-- EMAIL -->
+       <xsd:element name="email" type>	
+</xsd:schema>

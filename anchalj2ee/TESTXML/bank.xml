@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:account type="SAV" xmlns:tns="http://www.example.org/bank" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/bank bank.xsd ">
+  <tns:accno>0</tns:accno>
+  <tns:name>
+    <tns:fname>tns:fname</tns:fname>
+    <tns:lname>tns:lname</tns:lname>
+  </tns:name>
+  <tns:balance currency="Rs.">0.0</tns:balance>
+  <tns:card no="NMTOKENS"/>
+  <tns:cheques nos="NMTOKEN"/>
+  <tns:mobile>1234567891</tns:mobile>
+  <tns:email>tns:email</tns:email>
+</tns:account>
